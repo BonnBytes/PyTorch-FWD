@@ -12,7 +12,7 @@ Gall <https://pages.iai.uni-bonn.de/gall_juergen/>`__\ :sup:`1`
 | 2. *University of Tübingen, MIT-IBM Watson AI Lab*.
 |
 
-|Docs| |License| |CodeStyle| |Workflow|  |Arxiv| |Project|
+|Docs| |License| |CodeStyle| |Workflow|  |Arxiv|
 
 **Keywords:** Frechet Distance, Wavelet Packet Transform, Frechet
 Inception Distance, Diffusion, GAN, ImageNet, Image generation metrics.
