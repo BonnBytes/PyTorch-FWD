@@ -115,8 +115,8 @@ To run tests on your local system install `nox`, as well as this package via `pi
    nox -s test
 
 
-.. |Workflow| image:: https://github.com/NeuralHPC/PyTorch-FWD/actions/workflows/tests.yml/badge.svg
-   :target: https://github.com/NeuralHPC/PyTorch-FWD/actions/workflows/tests.yml
+.. |Workflow| image:: https://github.com/DiffuseMonkey/PyTorch-FWD/actions/workflows/tests.yml/badge.svg
+   :target: https://github.com/DiffuseMonkey/PyTorch-FWD/actions/workflows/tests.yml
 .. |License| image:: https://img.shields.io/badge/License-Apache_2.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
 .. |CodeStyle| image:: https://img.shields.io/badge/code%20style-black-000000.svg
