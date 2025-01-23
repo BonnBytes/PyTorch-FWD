@@ -5,7 +5,7 @@ Fréchet Wavelet Distance (FWD): A Domain-Agnostic Metric for Image Generation
 
 `Lokesh Veeramacheneni <https://lokiv.dev>`__\ :sup:`1`, `Moritz
 Wolter <https://www.wolter.tech/>`__\ :sup:`1`, `Hilde
-Kuehne <https://hildekuehne.github.io/>`__\ :sup:`1,2`, and `Juergen
+Kuehne <https://hildekuehne.github.io/>`__\ :sup:`2`, and `Juergen
 Gall <https://pages.iai.uni-bonn.de/gall_juergen/>`__\ :sup:`1`
 
 | 1. *University of Bonn*, 
@@ -35,7 +35,7 @@ of a wide variety of generators across various datasets that the
 proposed FWD is able to generalize and improve robustness to domain
 shift and various corruptions compared to other metrics.
 
-.. image:: https://github.com/NeuralHPC/PyTorch-FWD/blob/master/images/fwd_computation.png
+.. image:: https://github.com/BonnBytes/PyTorch-FWD/blob/master/images/fwd_computation.png
    :width: 100%
    :alt: Alternative text
 
@@ -115,8 +115,8 @@ To run tests on your local system install `nox`, as well as this package via `pi
    nox -s test
 
 
-.. |Workflow| image:: https://github.com/DiffuseMonkey/PyTorch-FWD/actions/workflows/tests.yml/badge.svg
-   :target: https://github.com/DiffuseMonkey/PyTorch-FWD/actions/workflows/tests.yml
+.. |Workflow| image:: https://github.com/BonnBytes/PyTorch-FWD/actions/workflows/tests.yml/badge.svg
+   :target: https://github.com/BonnBytes/PyTorch-FWD/actions/workflows/tests.yml
 .. |License| image:: https://img.shields.io/badge/License-Apache_2.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
 .. |CodeStyle| image:: https://img.shields.io/badge/code%20style-black-000000.svg
