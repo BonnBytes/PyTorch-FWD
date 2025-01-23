@@ -1,6 +1,6 @@
 
 **************************************************************************
-Fréchet Wavelet Distance (FWD): A Domain-Agnostic Metric for Image Generation
+Fréchet Wavelet Distance: A Domain-Agnostic Metric for Image Generation
 **************************************************************************
 
 `Lokesh Veeramacheneni <https://lokiv.dev>`__\ :sup:`1`, `Moritz
@@ -14,26 +14,22 @@ Gall <https://pages.iai.uni-bonn.de/gall_juergen/>`__\ :sup:`1`
 
 |Docs| |License| |CodeStyle| |Workflow|  |Arxiv|
 
-**Keywords:** Frechet Distance, Wavelet Packet Transform, Frechet
-Inception Distance, Diffusion, GAN, ImageNet, Image generation metrics.
+**Keywords:** Frechet Distance, Wavelet Packet Transform, FID, Diffusion, GAN, ImageNet, FD-DINOv2, 
 
-**Abstract:** Modern metrics for generative learning like Fréchet
-Inception Distance (FID) demonstrate impressive performance. However,
-they suffer from various shortcomings, like a bias towards specific
-generators and datasets. To address this problem, we propose the Fréchet
-Wavelet Distance (FWD) as a domain-agnostic metric based on Wavelet
-Packet Transform (:math:`W_p`). FWD provides a sight across a
-broad spectrum of frequencies in images with a high resolution, along
-with preserving both spatial and textural aspects. Specifically, we use
-:math:`W_p` to project generated and dataset images to packet
-coefficient space. Further, we compute Fréchet distance with the
-resultant coefficients to evaluate the quality of a generator. This
-metric is general-purpose and dataset-domain agnostic, as it does not
-rely on any pre-trained network while being more interpretable because
-of frequency band transparency. We conclude with an extensive evaluation
-of a wide variety of generators across various datasets that the
-proposed FWD is able to generalize and improve robustness to domain
-shift and various corruptions compared to other metrics.
+**Abstract:** Modern metrics for generative learning like Fréchet Inception Distance (FID) and
+DINOv2-Fréchet Distance (FD-DINOv2) demonstrate impressive performance.
+However, they suffer from various shortcomings, like a bias towards specific generators and datasets. To address this problem, we propose the Fréchet Wavelet
+Distance (FWD) as a domain-agnostic metric based on the Wavelet Packet Transform (:math:`W_p`). FWD provides a sight across a broad spectrum of frequencies in images
+with a high resolution, preserving both spatial and textural aspects. Specifically,
+we use (:math:`W_p`) to project generated and real images to the packet coefficient space. We
+then compute the Fréchet distance with the resultant coefficients to evaluate the
+quality of a generator. This metric is general-purpose and dataset-domain agnostic,
+as it does not rely on any pre-trained network while being more interpretable due
+to its ability to compute Fréchet distance per packet, enhancing transparency. We
+conclude with an extensive evaluation of a wide variety of generators across various
+datasets that the proposed FWD can generalize and improve robustness to domain
+shifts and various corruptions compared to other metrics.
+
 
 .. image:: https://github.com/BonnBytes/PyTorch-FWD/blob/master/images/fwd_computation.png
    :width: 100%
