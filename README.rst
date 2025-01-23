@@ -87,8 +87,7 @@ If you use this work, please cite using following bibtex entry
    author={Lokesh Veeramacheneni and Moritz Wolter and Hildegard Kuehne and Juergen Gall},
    booktitle={The Thirteenth International Conference on Learning Representations},
    year={2025},
-   url={https://openreview.net/forum?id=QinkNNKZ3b}
-}
+   url={https://openreview.net/forum?id=QinkNNKZ3b}}
 
 Acknowledgments
 ===============
