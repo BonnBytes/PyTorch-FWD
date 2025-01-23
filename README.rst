@@ -12,7 +12,7 @@ Gall <https://pages.iai.uni-bonn.de/gall_juergen/>`__\ :sup:`1`
 | 2. *University of Tübingen, MIT-IBM Watson AI Lab*.
 |
 
-|Docs| |License| |CodeStyle| |Workflow|  |Arxiv|
+|Docs| |License| |CodeStyle| |Workflow|  |Arxiv|  |Downloads|
 
 **Keywords:** Frechet Distance, Wavelet Packet Transform, FID, Diffusion, GAN, ImageNet, FD-DINOv2, 
 
@@ -125,3 +125,5 @@ To run tests on your local system install `nox`, as well as this package via `pi
 .. |Arxiv| image:: https://img.shields.io/badge/arXiv-Paper-<color>
    :target: https://arxiv.org/pdf/2312.15289
    :alt: Arxiv Paper
+.. |Downloads| image:: https://static.pepy.tech/badge/pytorchfwd
+   :target: https://pepy.tech/projects/pytorchfwd
