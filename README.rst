@@ -131,7 +131,7 @@ To run tests on your local system install `nox`, as well as this package via `pi
 Funding
 =======
 Research was supported by the Bundesministerium für Bildung und
-Forschung (BMBF) via its "BNTrAInee" (16DHBK1022) and "WestAI" (01IS22094E) projects. The
+Forschung (BMBF) via its "BNTrAInee" (16DHBK1022) and "WestAI" (01IS22094A) projects. The
 authors gratefully acknowledge the Gauss Centre for Supercomputing e.V. (www.gauss-centre.eu)
 for funding this project by providing computing time through the John von Neumann Institute for
 Computing (NIC) on the GCS Supercomputer JUWELS at Jülich Supercomputing Centre (JSC)
