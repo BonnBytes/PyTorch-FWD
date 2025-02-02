@@ -1,4 +1,4 @@
-.. image:: https://github.com/BonnBytes/PyTorch-FWD/blob/master/images/fwd_logo.png
+.. image:: https://raw.githubusercontent.com/BonnBytes/PyTorch-FWD/refs/heads/master/images/fwd_logo.png
    :width: 25%
    :align: center
    :alt: FWD LOGO
