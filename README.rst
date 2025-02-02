@@ -34,7 +34,7 @@ datasets that the proposed FWD can generalize and improve robustness to domain
 shifts and various corruptions compared to other metrics.
 
 
-.. image:: https://github.com/BonnBytes/PyTorch-FWD/blob/master/images/fwd_computation.png
+.. image:: https://raw.githubusercontent.com/BonnBytes/PyTorch-FWD/refs/heads/master/images/fwd_computation.png
    :width: 100%
    :alt: Alternative text
 
