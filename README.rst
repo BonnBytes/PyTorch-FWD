@@ -119,7 +119,7 @@ To run tests on your local system install `nox`, as well as this package via `pi
 .. |CodeStyle| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black
 .. |Docs| image:: https://readthedocs.org/projects/pytorchfwd/badge/?version=latest
-    :target: https://pytorchfwd.readthedocs.io/en/latest/fwd.html
+    :target: https://pytorchfwd.readthedocs.io/en/latest/index.html
     :alt: Documentation Status
 .. |Project| image:: https://img.shields.io/badge/Project-Website-red
    :target: https://lokiv.dev/frechet_wavelet_distance/
