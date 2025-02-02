@@ -1,4 +1,7 @@
-
+.. image:: ./images/fwd_logo.png
+   :width: 25%
+   :align: center
+   :alt: FWD LOGO
 **************************************************************************
 Fréchet Wavelet Distance: A Domain-Agnostic Metric for Image Generation
 **************************************************************************
