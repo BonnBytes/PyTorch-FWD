@@ -9,10 +9,11 @@ Fréchet Wavelet Distance: A Domain-Agnostic Metric for Image Generation
 `Lokesh Veeramacheneni <https://lokiv.dev>`__\ :sup:`1`, `Moritz
 Wolter <https://www.wolter.tech/>`__\ :sup:`1`, `Hilde
 Kuehne <https://hildekuehne.github.io/>`__\ :sup:`2`, and `Juergen
-Gall <https://pages.iai.uni-bonn.de/gall_juergen/>`__\ :sup:`1`
+Gall <https://pages.iai.uni-bonn.de/gall_juergen/>`__\ :sup:`1,3`
 
-| 1. *University of Bonn*, 
-| 2. *University of Tübingen, MIT-IBM Watson AI Lab*.
+| 1. *University of Bonn* 
+| 2. *University of Tübingen, MIT-IBM Watson AI Lab*
+| 3. *Lamarr Institute for Machine Learning and Artificial Intelligence*
 |
 
 |Docs| |License| |CodeStyle| |Workflow|  |Arxiv|  |Downloads|  |Project|
@@ -133,8 +134,4 @@ To run tests on your local system install `nox`, as well as this package via `pi
 
 Funding
 =======
-Research was supported by the Bundesministerium für Bildung und
-Forschung (BMBF) via its "BNTrAInee" (16DHBK1022) and "WestAI" (01IS22094A) projects. The
-authors gratefully acknowledge the Gauss Centre for Supercomputing e.V. (www.gauss-centre.eu)
-for funding this project by providing computing time through the John von Neumann Institute for
-Computing (NIC) on the GCS Supercomputer JUWELS at Jülich Supercomputing Centre (JSC)
+This research was supported by the Federal Ministry of Education and Research (BMBF) under grant no.\ 01IS22094A WEST-AI and 6DHBK1022 BNTrAInee, the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) GA 1927/9-1 (KI-FOR 5351) and the ERC Consolidator Grant FORHUE (101044724). Prof. Kuehne is supported by BMBF project STCL - 01IS22067. The authors gratefully acknowledge the Gauss Centre for Supercomputing e.V.\ (www.gauss-centre.eu) for funding this project by providing computing time through the John von Neumann Institute for Computing (NIC) on the GCS Supercomputer JUWELS at Jülich Supercomputing Centre (JSC). The authors heartfully thank all the volunteers who participated in the user study. The sole responsibility for the content of this publication lies with the authors.
