@@ -187,7 +187,7 @@ def _save_packets(
 
 def main():
     """Compute FWD given paths."""
-    global NUM_PROCESSES, IMAGE_EXTS
+    global NUM_PROCESSES
 
     th.manual_seed(0)
     args = _parse_args()
