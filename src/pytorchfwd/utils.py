@@ -22,7 +22,7 @@ def _parse_args():
         "--save-packets", action="store_true", help="Save the packets as npz file."
     )
     parser.add_argument(
-        "--wavelet", type=str, default="sym5", help="Choice of wavelet."
+        "--wavelet", type=str, default="Haar", help="Choice of wavelet."
     )
     parser.add_argument(
         "--max_level", type=int, default=4, help="wavelet decomposition level"
