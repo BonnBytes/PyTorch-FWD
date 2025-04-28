@@ -72,7 +72,7 @@ Here are the other arguments and defaults used.
      --batch-size          Batch size for wavelet packet transform. (default: 128)
      --num-processes       Number of multiprocess. (default: None)
      --save-packets        Save the packets as npz file. (default: False)
-     --wavelet             Choice of wavelet. (default: sym5)
+     --wavelet             Choice of wavelet. (default: Haar)
      --max_level           wavelet decomposition level (default: 4)
      --log_scale           Use log scaling for wavelets. (default: False)
 
