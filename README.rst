@@ -76,7 +76,7 @@ Here are the other arguments and defaults used.
      --max_level           wavelet decomposition level (default: 4)
      --log_scale           Use log scaling for wavelets. (default: False)
 
-We conduct all the experiments with `Haar` wavelet with transformation/decomposition level of `4` for `256x256` image.
+**We conduct all the experiments with `Haar` wavelet with transformation/decomposition level of `4` for `256x256` image.**
 In future, we plan to release the jax-version of this code.
 
 Citation
