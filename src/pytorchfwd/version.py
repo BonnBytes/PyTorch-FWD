@@ -1,3 +1,3 @@
 """Record the package version."""
 
-VERSION = "0.0.5-dev"
+VERSION = "1.0.0-dev"
