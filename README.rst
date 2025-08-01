@@ -85,13 +85,14 @@ If you use this work, please cite using following bibtex entry
 
 .. code-block::
 
-  @inproceedings{
-   veeramacheneni2025fwd,
-   title={Fr\'echet Wavelet Distance: A Domain-Agnostic Metric for Image Generation},
-   author={Lokesh Veeramacheneni and Moritz Wolter and Hildegard Kuehne and Juergen Gall},
-   booktitle={The Thirteenth International Conference on Learning Representations},
-   year={2025},
-   url={https://openreview.net/forum?id=QinkNNKZ3b}}
+  @inproceedings{veeramacheneni25fwd,
+  author={Lokesh Veeramacheneni and Moritz Wolter and Hilde Kuehne and Juergen Gall},
+  title={Fréchet Wavelet Distance: A Domain-Agnostic Metric for Image Generation},
+  year={2025},
+  cdate={1735689600000},
+  url={https://openreview.net/forum?id=QinkNNKZ3b},
+  booktitle={ICLR},
+  crossref={conf/iclr/2025}}
 
 Acknowledgments
 ===============
