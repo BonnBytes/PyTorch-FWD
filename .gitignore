@@ -173,3 +173,5 @@ logs/
 *.pdf
 *.tex
 !images/fwd_computation.png
+.python-version
+.DS_Store
