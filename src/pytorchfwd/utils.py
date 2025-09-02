@@ -31,6 +31,12 @@ def _parse_args():
         "--log_scale", action="store_true", help="Use log scaling for wavelets."
     )
     parser.add_argument(
+        "--resize",
+        type=int,
+        default=None,
+        help="Resize the images to specified resolution.",
+    )
+    parser.add_argument(
         "--deterministic",
         action="store_true",
         help="Set PyTorch to deterministic mode, for perfect reproducability.",

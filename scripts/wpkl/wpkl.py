@@ -8,7 +8,10 @@ import torch as th
 import torchvision.transforms as tv
 from tqdm import tqdm
 
-from src.pytorchfwd.freq_math import compute_kl_divergence, forward_wavelet_packet_transform
+from src.pytorchfwd.freq_math import (
+    compute_kl_divergence,
+    forward_wavelet_packet_transform,
+)
 from src.pytorchfwd.utils import ImagePathDataset, _parse_args
 
 th.set_default_dtype(th.float64)

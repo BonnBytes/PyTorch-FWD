@@ -75,8 +75,10 @@ Here are the other arguments and defaults used.
      --wavelet             Choice of wavelet. (default: Haar)
      --max_level           wavelet decomposition level (default: 4)
      --log_scale           Use log scaling for wavelets. (default: False)
+     --resize              Additional resizing. (deafult: None)
 
 **We conduct all the experiments with `Haar` wavelet with transformation/decomposition level of `4` for `256x256` image.**
+**The choice of max_level is dependent on the image resolution to maintain sufficient spial and frequency information. For 256 image-level 4, 128 image-level 3 and so on.**
 In future, we plan to release the jax-version of this code.
 
 Citation

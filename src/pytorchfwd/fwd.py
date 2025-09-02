@@ -2,7 +2,7 @@
 
 import os
 import pathlib
-from typing import List, Tuple
+from typing import List, Tuple, Union
 
 import numpy as np
 import torch as th
@@ -61,7 +61,12 @@ def compute_packet_statistics(
 
 
 def calculate_path_statistics(
-    path: str, wavelet: str, max_level: int, log_scale: bool, batch_size: int
+    path: str,
+    wavelet: str,
+    max_level: int,
+    log_scale: bool,
+    batch_size: int,
+    resize: Union[int, None],
 ) -> Tuple[np.ndarray, ...]:
     """Compute mean and sigma for given path.
 
@@ -71,6 +76,7 @@ def calculate_path_statistics(
         max_level (int): Decomposition level.
         log_scale (bool): Apply log scale.
         batch_size (int): Batch size for packet decomposition.
+        resize (Union[int, None]): Optional resize option.
 
     Raises:
         ValueError: Error if mu and sigma cannot be calculated.
@@ -88,8 +94,13 @@ def calculate_path_statistics(
         img_names = sorted(
             [name for ext in IMAGE_EXTS for name in posfix_path.glob(f"*.{ext}")]
         )
+        transfs_list = []
+        if resize is not None:
+            print(f"Resizing images to {(resize, resize)} resolution")
+            transfs_list.append(tv.Resize((resize, resize)))
+        transfs_list.append(tv.ToTensor())
         dataloader = th.utils.data.DataLoader(
-            ImagePathDataset(img_names, transforms=tv.ToTensor()),
+            ImagePathDataset(img_names, transforms=tv.Compose(transfs_list)),
             batch_size=batch_size,
             shuffle=False,
             drop_last=False,
@@ -122,7 +133,12 @@ def _compute_avg_frechet_distance(mu1, mu2, sigma1, sigma2):
 
 
 def compute_fwd(
-    paths: List[str], wavelet: str, max_level: int, log_scale: bool, batch_size: int
+    paths: List[str],
+    wavelet: str,
+    max_level: int,
+    log_scale: bool,
+    batch_size: int,
+    resize: Union[int, None],
 ) -> float:
     """Compute Frechet Wavelet Distance.
 
@@ -132,6 +148,7 @@ def compute_fwd(
         max_level (int): Decomposition level.
         log_scale (bool): Apply log scale.
         batch_size (int): Batch size for packet decomposition.
+        resize (Union[int, None]): Optional resize option.
 
     Raises:
         RuntimeError: Error if path doesn't exist.
@@ -145,11 +162,11 @@ def compute_fwd(
 
     print(f"Computing stats for path: {paths[0]}")
     mu_1, sigma_1 = calculate_path_statistics(
-        paths[0], wavelet, max_level, log_scale, batch_size
+        paths[0], wavelet, max_level, log_scale, batch_size, resize
     )
     print(f"Computing stats for path: {paths[1]}")
     mu_2, sigma_2 = calculate_path_statistics(
-        paths[1], wavelet, max_level, log_scale, batch_size
+        paths[1], wavelet, max_level, log_scale, batch_size, resize
     )
 
     print("Computing Frechet distances for each packet.")
@@ -157,7 +174,12 @@ def compute_fwd(
 
 
 def _save_packets(
-    paths: List[str], wavelet: str, max_level: int, log_scale: bool, batch_size: int
+    paths: List[str],
+    wavelet: str,
+    max_level: int,
+    log_scale: bool,
+    batch_size: int,
+    resize: Union[int, None],
 ) -> None:
     """Save packets.
 
@@ -167,6 +189,7 @@ def _save_packets(
         max_level (int): Decomposition level.
         log_scale (bool): Apply log scale.
         batch_size (int): Batch size for packet decomposition.
+        resize (Union[int, None]): Optional resize option.
 
     Raises:
         RuntimeError: Error if input path is invalid.
@@ -180,7 +203,7 @@ def _save_packets(
 
     print(f"Computing stats for path: {paths[0]}")
     mu_1, sigma_1 = calculate_path_statistics(
-        paths[0], wavelet, max_level, log_scale, batch_size
+        paths[0], wavelet, max_level, log_scale, batch_size, resize
     )
     np.savez_compressed(paths[1], mu=mu_1, sigma=sigma_1)
 
@@ -205,12 +228,22 @@ def main():
         th.use_deterministic_algorithms(True)
     if args.save_packets:
         _save_packets(
-            args.path, args.wavelet, args.max_level, args.log_scale, args.batch_size
+            args.path,
+            args.wavelet,
+            args.max_level,
+            args.log_scale,
+            args.batch_size,
+            args.resize,
         )
         return
 
     fwd = compute_fwd(
-        args.path, args.wavelet, args.max_level, args.log_scale, args.batch_size
+        args.path,
+        args.wavelet,
+        args.max_level,
+        args.log_scale,
+        args.batch_size,
+        args.resize,
     )
     print(f"FWD: {fwd}")
 
